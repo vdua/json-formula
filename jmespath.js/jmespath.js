@@ -259,7 +259,7 @@ function JsonFormula() {
     if (n instanceof Array) return 0;
     if (typeof n === 'number') return n;
     if (typeof n === 'string') {
-      const temp = parseFloat(n);
+      const temp = +n;
       return Number.isNaN(temp) ? 0 : temp;
     }
     if (typeof n === 'boolean') return n ? 1 : 0;
